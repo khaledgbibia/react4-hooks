@@ -12,7 +12,8 @@ export const Movieliste = ({data}) => {
     }}>
   
  
-        {data.map((el)=><MovieCard movieInfo={el}/>)}
+  {data.map((el)=><MovieCard movieInfo={el}/>)}
+ 
         
     </div>
   )
