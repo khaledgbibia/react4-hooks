@@ -11,8 +11,11 @@ import SearchBar from './components/SearchBar';
 
 
 
+
+
 function App() {
   const [movies,setMovies]=useState(data);
+  console.log(movies)
   const add =(newMovie)=>{
 setMovies([...movies, newMovie])
 

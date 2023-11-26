@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Rating from '@mui/material/Rating';
 import { findByLabelText } from '@testing-library/react';
-
+import { v4 as uuidv4 } from "uuid";
 
 export const Addmovie = ({add   }) => {
     const [show, setShow] = useState(false);
@@ -12,6 +12,7 @@ export const Addmovie = ({add   }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [newMovie,setNewMovie]=useState({
+    id:uuidv4(),
     title:"",
     description:"",
     postUrl:"",
@@ -69,6 +70,15 @@ export const Addmovie = ({add   }) => {
          onChange={change}
          />
       </Form.Group>
+      <Form.Group className="mb-4" controlId="formBasicPasswor">
+        <Form.Label>TrailerURL</Form.Label>
+        <Form.Control
+         name="trailer" 
+         placeholder="Url Trailer..."
+         onChange={change}
+         />
+      </Form.Group>
+
      <center>
       <Rating
       
